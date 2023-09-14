@@ -29,8 +29,8 @@ jobs:
     needs: find-pr-id
     with:
       environment: production
-      public-domain: d3lay.com
-      public-twitter: delay_work
+      public-domain: astro.benwk.app
+      public-twitter: benwkz
       ga-measurement: G-0QTJDGQE3S
       pr-id: ${{ needs.find-pr-id.outputs.pr-id }}
     secrets:

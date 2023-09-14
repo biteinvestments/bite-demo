@@ -29,8 +29,8 @@ jobs:
     needs: find-pr-id
     with:
       environment: staging
-      public-domain: staging.d3lay.com
-      public-twitter: delay_work
+      public-domain: astro.benwk.app
+      public-twitter: benwkz
       ga-measurement: G-Q3GS5ELQ09
       pr-id: ${{ needs.find-pr-id.outputs.pr-id }}
     secrets:
@@ -42,6 +42,6 @@ jobs:
     needs: [find-pr-id, deploy-to-staging]
     with:
       local: false
-      test-url: https://staging.d3lay.com
+      test-url: https://astro.benwk.app
       pr-id: ${{ needs.find-pr-id.outputs.pr-id }}
     secrets: inherit
