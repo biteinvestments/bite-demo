@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 
+import Translation from "../i18n/components/Translation.astro";
 import { getLangFromUrl, useTranslations } from "../i18n";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -58,7 +59,12 @@ window.onload = function () {
       </defs>
     </svg>
     <h1><span class="text-gradient">{t("home.title")}</span></h1>
-    <h2>Programming is my <span class="text-gradient">Language</span></h2>
+    <h2>
+      <Translation i18n="home.subtitle">
+        <span class="text-gradient">Programming</span> is my Language, cmd + c
+        and cmd + v are my <span class="text-gradient">lifeblood.</span>
+      </Translation>
+    </h2>
     <p class="instructions">
       My services is under construction. <code>Stay tuned!</code><br />
       <strong>Key values:</strong> Data-driven, Efficient, Long-termism,
