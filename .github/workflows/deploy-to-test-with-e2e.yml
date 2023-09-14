@@ -21,8 +21,8 @@ jobs:
     needs: component-e2e-tests
     with:
       environment: test
-      public-domain: d3lay.test.delay.dev
-      public-twitter: delay_work
+      public-domain: astro.benwk.app
+      public-twitter: benwkz
       ga-measurement: G-JR51G6BN6Z
       pr-id: ${{ github.event.pull_request.number }}
     secrets:
