@@ -6,7 +6,7 @@ on:
 jobs:
   deploy-to-test:
     name: Deploy to Test Environment
-    uses: ./.github/workflows/deployment.yml
+    uses: benwk/github-action/.github/workflows/deployment-cloudflare-pages.yml@main
     with:
       environment: test
       public-domain: d3lay.test.delay.dev
