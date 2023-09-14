@@ -6,6 +6,7 @@ interface Props {
   path: string;
 }
 
+import LanguagePicker from "../components/LanguagePicker.astro";
 const { title, description, image, path } = Astro.props;
 const url = `https://${import.meta.env.PUBLIC_DOMAIN}${path}`;
 const twitter = `@${import.meta.env.PUBLIC_TWITTER}`;
@@ -37,6 +38,9 @@ const twitter = `@${import.meta.env.PUBLIC_TWITTER}`;
   </head>
   <body>
     <slot />
+    <footer>
+      <LanguagePicker />
+    </footer>
   </body>
 </html>
 <style is:global>
