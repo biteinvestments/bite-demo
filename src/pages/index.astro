@@ -1,14 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+
+import { getLangFromUrl, useTranslations } from "../i18n";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const currentURL = Astro.request.url;
 const currentPath = new URL(currentURL).pathname;
 ---
 
 <script data-cfasync="false" type="text/javascript">
 window.onload = function () {
-	let iframe = document.querySelector(".discord-widget");
-	iframe.src = "https://discord.com/widget?id=1091176387357974548&theme=dark";
+  let iframe = document.querySelector(".discord-widget");
+  iframe.src = "https://discord.com/widget?id=1091176387357974548&theme=dark";
 };
 </script>
 
@@ -52,7 +57,7 @@ window.onload = function () {
         </linearGradient>
       </defs>
     </svg>
-    <h1><span class="text-gradient">Ben's Coding</span></h1>
+    <h1><span class="text-gradient">{t("home.title")}</span></h1>
     <h2>Programming is my <span class="text-gradient">Language</span></h2>
     <p class="instructions">
       My services is under construction. <code>Stay tuned!</code><br />
