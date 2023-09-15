@@ -13,17 +13,18 @@ jobs:
       local: true
       test-url: http://localhost:4321
       pr-id: ${{ github.event.pull_request.number }}
-    secrets: inherit
-
-  deploy-to-test:
-    name: Deploy to Test Environment
-    uses: benwk/github-action/.github/workflows/deployment-cloudflare-pages.yml@main
-    needs: component-e2e-tests
-    with:
-      environment: test
-      public-domain: astro.benwk.app
-      public-twitter: benwkz
-      ga-measurement: G-JR51G6BN6Z
-      pr-id: ${{ github.event.pull_request.number }}
     secrets:
-      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+
+  # deploy-to-test:
+  #   name: Deploy to Test Environment
+  #   uses: benwk/github-action/.github/workflows/deployment-cloudflare-pages.yml@main
+  #   needs: component-e2e-tests
+  #   with:
+  #     environment: test
+  #     public-domain: astro.benwk.app
+  #     public-twitter: benwkz
+  #     ga-measurement: G-JR51G6BN6Z
+  #     pr-id: ${{ github.event.pull_request.number }}
+  #   secrets:
+  #     CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
