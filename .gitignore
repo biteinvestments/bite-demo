@@ -25,3 +25,8 @@ pnpm-debug.log*
 cypress/videos
 cypress/screenshots
 coverage/
+cypress.env.json
+
+# translations files
+src/pages/zh-cn/
+src/pages/fr/

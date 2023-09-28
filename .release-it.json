@@ -18,11 +18,10 @@
   "github": {
     "release": true,
     "releaseName": "Release v${version}",
-    "autoGenerate": true,
-    "preRelease": true,
+    "draft": true,
     "web": false,
     "comments": {
-      "submit": false,
+      "submit": true,
       "issue": ":rocket: _This issue has been resolved in v${version}. See [${releaseName}](${releaseUrl}) for release notes._",
       "pr": ":rocket: _This pull request is included in v${version}. See [${releaseName}](${releaseUrl}) for release notes._"
     }
