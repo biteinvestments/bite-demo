@@ -9,9 +9,6 @@
     "tagName": "v${version}",
     "tagArgs": ["-s"]
   },
-  "hooks": {
-    "before:init": ["npm run lint", "npm run test"]
-  },
   "plugins": {
     "@release-it/conventional-changelog": {
       "preset": "angular",

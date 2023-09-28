@@ -1,10 +1,10 @@
 {
   "name": "template-astro",
   "type": "module",
-  "version": "0.0.0",
   "bin": {
     "translate": "./src/i18n/cli/index.js"
   },
+  "version": "0.1.0",
   "scripts": {
     "dev": "npx translate && astro dev",
     "start": "npx translate && astro dev",
